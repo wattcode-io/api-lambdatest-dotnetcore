@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - printenv
+      - npm install
+      - npm install -g serverless
+
+  build:
+    commands:
+      - pwd
+      - ls
+      - serverless deploy -v
+
+artifacts:  
+  base-directory: ./src/bin/release/netcoreapp2.1/
+  files:
+    - '**/*'
