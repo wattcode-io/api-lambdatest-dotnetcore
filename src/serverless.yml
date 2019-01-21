@@ -4,9 +4,11 @@ provider:
   name: aws
   runtime: dotnetcore2.1
   region: us-east-1
+  #profile: dandonovan-default
 
 package:
-  artifact: ./deploy-package.zip
+  artifact: deploy-package.zip
+  #artifact: bin/release/netcoreapp2.1/deploy-package.zip
 
 functions:
   api:

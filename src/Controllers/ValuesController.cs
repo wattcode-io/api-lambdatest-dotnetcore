@@ -14,7 +14,7 @@ namespace Realvision.LambdaTestApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2", "value3", "someNewValue", "value5" };
+            return new string[] { "value1", "value2", "backto3" };
         }
 
         // GET api/values/5
