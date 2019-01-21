@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       - printenv
-      - npm install
       - npm install -g serverless
       - dotnet tool install --global Amazon.Lambda.Tools --version 3.1.2
 
@@ -18,3 +17,8 @@ phases:
     commands:
         - dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/deploy-package.zip
         - serverless deploy -v
+
+artifacts:  
+  base-directory: ./src/bin/Debug/netcoreapp2.1
+  files:
+    - '**/*'
