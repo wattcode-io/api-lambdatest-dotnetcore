@@ -11,9 +11,9 @@ phases:
     commands:
       - pwd
       - ls
-      - serverless deploy -v
+      - serverless deploy -v --package deploy-package.zip
 
 artifacts:  
-  base-directory: ./src/bin/release/netcoreapp2.1/
+  base-directory: ./
   files:
     - '**/*'
