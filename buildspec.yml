@@ -2,14 +2,17 @@ version: 0.2
 
 phases:
   install:
-    - npm install
-    - npm install -g serverless
-    - dotnet tool install --global Amazon.Lambda.Tools --version 3.1.2
+    commands:
+      - printenv
+      - npm install
+      - npm install -g serverless
+      - dotnet tool install --global Amazon.Lambda.Tools --version 3.1.2
 
   build:
     commands:
       - cd ./src
       - dotnet restore
+      - dotnet build
 
   post_build:
     commands:
