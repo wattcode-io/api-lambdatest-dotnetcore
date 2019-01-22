@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - printenv
+
+  build:
+    commands:
+      - cd ./tests-integration
+      - dotnet restore
+      - dotnet test
+  
+  # post_build:
+  #   commands:
+  #       - pwd
+  #       - dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/deploy-package.zip
+  #       - cp ../buildspec-serverless-deploy.yml bin/release/netcoreapp2.1
+  #       - cp ./serverless.yml bin/release/netcoreapp2.1
