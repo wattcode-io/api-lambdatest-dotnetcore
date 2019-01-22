@@ -8,7 +8,7 @@ namespace tests_integration
         [Fact]
         public void Test1()
         {
-
+            Assert.False(true);
         }
     }
 }
